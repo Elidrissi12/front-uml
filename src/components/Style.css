@@ -1,0 +1,343 @@
+.form-container{
+    position: absolute;
+    left: 4%;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2px;
+}
+.cont1 {
+    display: flex;
+    flex: 0 0 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    justify-content: space-around;
+    width: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-right: 2px solid gray;
+    border-radius: 10px 0 0 10px;
+    margin-top: 8%;
+}
+.cont2 {
+    display: flex;
+    flex: 0 0 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    justify-content: space-around;
+    width: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 8%;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+.canvas-container{
+    position: relative;
+    flex: 0 0 80%;
+    margin-left: 30px;
+}
+.toolbarContainer{
+    position: absolute;
+    top: 5px;
+    left: 25%;
+    display: flex;
+    padding: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.toolBtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.toolBtn:hover {
+    background-color: #0056b3;
+}
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background: rgb(210, 210, 210);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 0px;
+    z-index: 1000;
+}
+.popup1 {
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background: rgb(218, 218, 218);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 4%;
+    z-index: 1000;
+}
+.popup-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 500px;
+    max-height: 80vh;
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    animation: popupFadeIn 0.3s ease-out;
+}
+
+/* Add a smooth scroll effect */
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Title */
+.popup-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Inputs and Selects */
+.popup-content input[type="text"],
+.popup-content select {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+.popup-content input[type="text"]:focus,
+.popup-content select:focus {
+    border-color: #4caf50;
+}
+
+/* Buttons */
+.popup-content button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    opacity: 0.9;
+}
+
+/* Section Headings */
+.popup-content h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Attributes and Methods Container */
+.popup-content div {
+    margin-bottom: 15px;
+}
+#delete-button {
+    background: transparent;
+    cursor: pointer;
+}
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.delete {
+    width: 100%;
+    background-color: red;
+    color: white;
+}
+.delete:hover {
+    background-color: rgb(248, 91, 91);
+}
+#save {
+    width: 200px;
+    background-color: #4caf50;
+    color: white;
+}
+#save:hover{
+    background-color: #75b077;
+}
+#close {
+    width: 200px;
+    background-color: #cacaca;
+    color: black;
+}
+#close:hover{
+    background-color: #d1d2d1;
+}
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: #ff5252;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.confirm-button:hover {
+    background-color: #d32f2f;
+}
+
+.cancel-button:hover {
+    background-color: #bdbdbd;
+}
+ion-icon {
+    font-size: 20px;
+    color: #f81505;
+}
+ion-icon:hover {
+    color: #050404;
+    font-weight: 200;
+}
+
+
+/* Popup container */
+.popup1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content */
+.popup-content1 {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Title styling */
+.popup-content1 h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Code preview styling */
+.code-preview {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px;
+}
+
+/* Close button styling */
+.close-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #0056b3;
+}
+.relationship-item {
+    margin: 10px 0;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.relationship-item:hover {
+    background-color: #e0e0e0;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
